@@ -59,6 +59,10 @@ class Exo6 extends GroovyTestCase {
         int count = 0
         // ------------ START EDITING HERE ----------------------
 
+        new File('src').eachFileRecurse {
+            if (it.isFile())
+                if (it.getText().contains('Lorem')) ++count
+        }
         // ------------ STOP EDITING HERE  ----------------------
         assert count == 3
 
