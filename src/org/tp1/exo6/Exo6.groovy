@@ -73,7 +73,13 @@ class Exo6 extends GroovyTestCase {
         // range objects, store all the prime numbers between 200 and 250 in the target variable
         def primesBetween200And250 = []
         // ------------ START EDITING HERE ----------------------
-
+        (200..250).each { it1 ->
+            def b = true
+            (2..<it1).each { it2 ->
+                if (it1 % it2 == 0) b = false
+            }
+            if (b) primesBetween200And250.add(it1)
+        }
         // ------------ STOP EDITING HERE  ----------------------
         assert primesBetween200And250 == [211, 223, 227, 229, 233, 239, 241]
 
