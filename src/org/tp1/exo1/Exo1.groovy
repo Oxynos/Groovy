@@ -58,7 +58,7 @@ class Exo1 extends GroovyTestCase {
         // Concatenate the two values of 'right' and 'left' into result to proceed using Groovy syntax
         def result
         // ------------ START EDITING HERE ----------------------
-
+        result = map.left + map.right
         // ------------ STOP EDITING HERE  ----------------------
 
         assert result.toCharArray().size() == 16
