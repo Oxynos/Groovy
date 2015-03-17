@@ -33,7 +33,9 @@ class Exo5 extends GroovyTestCase {
         // http://groovy.codehaus.org/groovy-jdk/java/util/Map.html#each(groovy.lang.Closure)
         def idListResult = []
         // ------------ START EDITING HERE ----------------------
-
+        idToNameMap.each {
+            idListResult.add(it.getKey() + it.getValue())
+        }
         // ------------ STOP EDITING HERE  ----------------------
         assert idListResult == ['333Matthew', '233Christopher', '133Dominic']
     }
