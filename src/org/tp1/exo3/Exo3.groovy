@@ -23,7 +23,8 @@ class Exo3 extends GroovyTestCase {
         def javaFirstName
         def groovyFirstName
         // ------------ START EDITING HERE ----------------------
-
+        javaFirstName = javaPerson.getFirstName()
+        groovyFirstName = groovyPerson.getFirstName()
         // ------------ STOP EDITING HERE  ----------------------
 
         assert javaFirstName == 'Argus'
