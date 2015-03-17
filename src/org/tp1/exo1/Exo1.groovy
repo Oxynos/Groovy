@@ -121,7 +121,9 @@ class Exo1 extends GroovyTestCase {
     private String createMessageForUser(UserService userService) {
         def message
         // ------------ START EDITING HERE ----------------------
-
+        def getFirstName = userService?.loggedInUser?.firstName
+        def testIsNull = getFirstName ?: "Anonymous"
+        message = 'Hello ' + testIsNull + '!'
         // ------------ STOP EDITING HERE  ----------------------
 
         // Note how Groovy doesn't require the 'return' keyword! It will simply return the last expression.
