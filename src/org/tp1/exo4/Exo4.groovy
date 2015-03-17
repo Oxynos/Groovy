@@ -140,7 +140,7 @@ class Exo4 extends GroovyTestCase {
         // http://groovy.codehaus.org/groovy-jdk/java/lang/String.html
         def expectedCount
         // ------------ START EDITING HERE ----------------------
-
+        expectedCount = 3
         // ------------ STOP EDITING HERE  ----------------------
 
         assert count == expectedCount
@@ -154,7 +154,7 @@ class Exo4 extends GroovyTestCase {
         // What will the value of mysteryList be?
         def expectedMysteryList
         // ------------ START EDITING HERE ----------------------
-
+        expectedMysteryList = ['Baby', 'Yeah']
         // ------------ STOP EDITING HERE  ----------------------
         assert mysteryList == expectedMysteryList
 
