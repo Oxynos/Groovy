@@ -43,7 +43,8 @@ class Exo2 extends GroovyTestCase {
         String s2 = ''
 
         // ------------ START EDITING HERE ----------------------
-
+        s1 = ""
+        s2 = "Cédric"
         // ------------ STOP EDITING HERE  ----------------------
 
         // Note how we can use String expressions inside an if statement.  It is automatically converted into a boolean.
