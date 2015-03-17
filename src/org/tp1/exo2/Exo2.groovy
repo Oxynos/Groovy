@@ -29,7 +29,8 @@ class Exo2 extends GroovyTestCase {
         List<String> list = ['item']
 
         // ------------ START EDITING HERE ----------------------
-
+        map.put("key", "value")
+        list.clear()
         // ------------ STOP EDITING HERE  ----------------------
 
         assert map.asBoolean()
