@@ -15,7 +15,8 @@ class Exo2 extends GroovyTestCase {
         def predicate2 = true
 
         // ------------ START EDITING HERE ----------------------
-
+        predicate1 = true
+        predicate2 = false
         // ------------ STOP EDITING HERE  ----------------------
 
         assert predicate1
