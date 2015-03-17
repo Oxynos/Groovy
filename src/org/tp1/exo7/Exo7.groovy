@@ -37,7 +37,9 @@ class Exo7 extends GroovyTestCase {
                 "and can become difficult to maintain"
         String groovyString
         // ------------ START EDITING HERE ----------------------
-
+        groovyString = """In Java a multiline string
+requires using special signs such as ${signs}
+and can become difficult to maintain"""
         // ------------ STOP EDITING HERE  ----------------------
         assert groovyString == javaString
     }
