@@ -29,7 +29,7 @@ class Exo4 extends GroovyTestCase {
         // What is the result from the above execution?
         def expectedHelloClosureResult
         // ------------ START EDITING HERE ----------------------
-
+        expectedHelloClosureResult = sayHelloClosure()
         // ------------ STOP EDITING HERE  ----------------------
         assert helloClosureResult == expectedHelloClosureResult
 
@@ -40,7 +40,7 @@ class Exo4 extends GroovyTestCase {
         // What is the result from the above execution?
         String expectedHelloRonalda
         // ------------ START EDITING HERE ----------------------
-
+        expectedHelloRonalda = personalizedHelloClosure('Ronalda')
         // ------------ STOP EDITING HERE  ----------------------
         assert helloRonalda == expectedHelloRonalda
 
@@ -53,14 +53,14 @@ class Exo4 extends GroovyTestCase {
         // What is the result from the above execution?
         def expectedHappyBirthdayGranger
         // ------------ START EDITING HERE ----------------------
-
+        expectedHappyBirthdayGranger = happyBirthdayClosure('Hermione')
         // ------------ STOP EDITING HERE  ----------------------
         assert happyBirthdayGranger == expectedHappyBirthdayGranger
 
         // Create a closure that accepts two integers, adds them, and multiplies the result by two
         def resultClosure
         // ------------ START EDITING HERE ----------------------
-
+        resultClosure = { int x1, x2 -> return (x1 + x2) * 2}
         // ------------ STOP EDITING HERE  ----------------------
 
         assert resultClosure(2, 3) == 10
