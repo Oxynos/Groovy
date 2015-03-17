@@ -22,7 +22,8 @@ class Exo1 extends GroovyTestCase {
 
         // Assign our variables the required values to continue...
         // ------------ START EDITING HERE ----------------------
-
+        assertion = true
+        hello = "Hello"
         // ------------ STOP EDITING HERE  ----------------------
 
         assert assertion, 'Assign "true" to the "assertion" variable to proceed'
