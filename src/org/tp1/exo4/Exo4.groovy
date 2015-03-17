@@ -105,7 +105,7 @@ class Exo4 extends GroovyTestCase {
         // What will monkeyColors contain?
         def expectedMonkeyColors = []
         // ------------ START EDITING HERE ----------------------
-
+        expectedMonkeyColors = ['blue', 'red', 'purple']
         // ------------ STOP EDITING HERE  ----------------------
         assert monkeyColors == expectedMonkeyColors
 
@@ -115,9 +115,14 @@ class Exo4 extends GroovyTestCase {
         // StringWriter but leave out the lines that begin with #.
 
         StringWriter filteredResult = new StringWriter()
-        def prefix = 'src/org/tp1/exo04/'
+        def prefix = 'src/org/tp1/exo4/'
         // ------------ START EDITING HERE ----------------------
-
+        String lines = ""
+        List<String> lines2 = new File("$prefix/exercise.txt").readLines();
+        for (String s : lines2)
+            if (s.size() > 0)
+                if (s.getChars()[0] != '#') lines += s + "\n"
+        filteredResult.write(lines)
         // ------------ STOP EDITING HERE  ----------------------
 
         String result = filteredResult.toString().trim().replaceAll(/[\n\r]+/, '\n')
