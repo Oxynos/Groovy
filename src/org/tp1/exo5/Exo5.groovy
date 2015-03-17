@@ -50,7 +50,7 @@ class Exo5 extends GroovyTestCase {
         // What will range equal?
         def expectedRange = []
         // ------------ START EDITING HERE ----------------------
-
+        expectedRange = [5, 6, 7, 8, 9, 10]
         // ------------ STOP EDITING HERE  ----------------------
         assert range == expectedRange
     }
