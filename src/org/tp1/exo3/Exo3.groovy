@@ -40,7 +40,7 @@ class Exo3 extends GroovyTestCase {
         def failed = true
         shouldFail (ReadOnlyPropertyException) {
             // ------------ START EDITING HERE ----------------------
-
+            person.ssn = "test"
             // ------------ STOP EDITING HERE  ----------------------
             failed = false
         }

@@ -10,7 +10,7 @@ package org.tp1.exo3
 class GroovyPerson {
     String firstName
     String lastName
-    String ssn      // Marking the field 'final' makes it read-only after construction.
+    final String ssn      // Marking the field 'final' makes it read-only after construction.
 
     GroovyPerson(String firstName, String lastName, String ssn) {
         this.firstName = firstName
