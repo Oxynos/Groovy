@@ -91,7 +91,7 @@ and can become difficult to maintain"""
         // Create the same Pattern object in Groovy
         def patternInGroovy
         // ------------ START EDITING HERE ----------------------
-
+        patternInGroovy = ~/\d{3}([,\s])?\d{4}/
         // ------------ STOP EDITING HERE  ----------------------
         assert patternInGroovy instanceof Pattern
         assertEquals(patternInJava.pattern(), patternInGroovy.pattern())
@@ -101,7 +101,12 @@ and can become difficult to maintain"""
         def names = 'John Lennon, Paul McCartney, George Harrison, Ringo Starr'
         def firstNamesList = []
         // ------------ START EDITING HERE ----------------------
-
+        def match = names =~ '[A-Za-z]+'
+        int i = 1
+        match.each {
+            if (i % 2 != 0) firstNamesList.add(it)
+            i++
+        }
         // ------------ STOP EDITING HERE  ----------------------
         assert firstNamesList == ['John', 'Paul', 'George', 'Ringo']
 
@@ -110,7 +115,7 @@ and can become difficult to maintain"""
         def number = '4927856234092'
         boolean isNumberValid = false
         // ------------ START EDITING HERE ----------------------
-
+        isNumberValid = number ==~ /^4[0-9]{12}(?:[0-9]{3})?$/
         // ------------ STOP EDITING HERE  ----------------------
         assert isNumberValid, 'Visa number should be valid!'
     }
