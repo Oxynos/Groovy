@@ -67,7 +67,8 @@ and can become difficult to maintain"""
         // a Slashy string regexp
         def groovyRegExp
         // ------------ START EDITING HERE ----------------------
-
+        groovyRegExp = /(?sm)(.*?)\s+(\d+)\s+(\d+)/
+        println()
         // ------------ STOP EDITING HERE  ----------------------
         def matcher = text =~ groovyRegExp
         def groovySum = matcher.collect { it[3].toInteger() }.sum()
