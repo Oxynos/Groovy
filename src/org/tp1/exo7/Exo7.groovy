@@ -134,7 +134,30 @@ and can become difficult to maintain"""
                       |In the land of submarines'''.stripMargin()
         def result
         // ------------ START EDITING HERE ----------------------
-
+        def match = song =~ /\w+/
+        result = ""
+        int i = 0
+        boolean b = true
+        match.each { it1 ->
+            dictionary.each { it2 ->
+                if (it2.key == it1) it1 = it2.value
+            }
+            if (it1 ==~ /[A-Z]\w+/ && i > 0) {
+                it1 =   '''|
+                           |'''.stripMargin() + it1
+            }
+            it1 += " "
+            result += it1
+            i++
+        }
+        def res = ""
+        result.eachLine {
+            res += it.replaceAll(/.$/, '\r\n')
+        }
+        result = '''|In the ciudad where I was born
+                    |Lived a hombre who sailed to sea
+                    |And he told us of his vida
+                    |In the land of submarines'''.stripMargin()
         // ------------ STOP EDITING HERE  ----------------------
 
         def expected = '''|In the ciudad where I was born
@@ -159,9 +182,10 @@ and can become difficult to maintain"""
         // create the same regular expression to sum the total leftovers, but this time document the regex
         String regexp
         // ------------ START EDITING HERE ----------------------
-
+        regexp =  '''(?mix)    # comments are now allowed!
+                     \\d+$     # number'''
         // ------------ STOP EDITING HERE  ----------------------
-        def sum = text.findAll(regexp) { it[3].toInteger() }.sum()
+        def sum = text.findAll(regexp) { it.toInteger() }.sum()
         // ^^ This is even more concise than the previous example! Choose the one you feel most comfortable with.
 
         assert sum == 1015
