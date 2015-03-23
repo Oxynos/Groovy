@@ -94,7 +94,10 @@ class Exo8 extends GroovyTestCase {
         // Create a closure that returns two random integers between 0 (inclusive) to maxInt (exclusive)
         def generateTwoRandomInts = { int maxInt ->
             // ------------ START EDITING HERE ----------------------
-
+            Random rand = new Random();
+            int n1 = rand.nextInt(maxInt);
+            int n2 = rand.nextInt(maxInt);
+            return [n1, n2]
             // ------------ STOP EDITING HERE  ----------------------
         }
 
