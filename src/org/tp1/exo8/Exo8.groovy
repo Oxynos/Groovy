@@ -22,6 +22,20 @@ class Exo8 extends GroovyTestCase {
 
         def magicClosure = { input ->
             // ------------ START EDITING HERE ----------------------
+            switch (input) {
+                case 1..100:
+                    input /= 2
+                    break
+                case "smilee":
+                    input = "smiley"
+                    break
+                case "heehee":
+                    input = "heehey"
+                    break
+                default:
+                    input = input
+                    break
+            }
 
             // ------------ STOP EDITING HERE  ----------------------
         }
